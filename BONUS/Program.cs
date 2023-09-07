@@ -17,7 +17,7 @@ Rieseguire il programma con l’input preso esternamente dall’utente.
 Console.Write("Inserisci la lunghezza dell'array vuoto: ");
 int lunghezza = Convert.ToInt32(Console.ReadLine());
 
-int[] arrayPopolato = PopolaArray(lunghezza);
+int[] arrayPopolato = CreaArrayPopolato(lunghezza);
 
 Console.Write("Il tuo array:");
 
@@ -45,7 +45,7 @@ void StampaArray(int[] array)
     Console.WriteLine("]");
 }
 
-int [] PopolaArray(int lunghezza)
+int [] CreaArrayPopolato(int lunghezza)
 {
     int[] array = new int[lunghezza]; 
 
