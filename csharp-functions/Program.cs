@@ -10,17 +10,27 @@ int quadrato = Quadrato(numero);
 
 Console.WriteLine($"Il quadrato di {numero} è {quadrato}");
 
+Console.WriteLine();
 
-int[] array1 = { 2, 3, 4, 5 };
-
-int[] arrayQuadro = ElevaArrayAlQuadrato(array1);
-
-Console.Write($"dato questo array1: ");
-StampaArray(array1);
-Console.Write($"moltiplico al quadrato ogni suo elemento ed ottngo il seguente array: ");
-StampaArray(arrayQuadro);
-
-
+int[] arrayNoto = { 2, 6, 7, 5, 3, 9 };
+//Stampare l’array di numeri fornito a video
+Console.Write($"ArrayNoto: ");
+StampaArray(arrayNoto);
+/*Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato 
+(Verificare che l’array originale non sia stato modificato quindi ristampare 
+nuovamente l’array originale e verificare che sia rimasto [2, 6, 7, 5, 3, 9])*/
+int[] arrayNotoQuadro = ElevaArrayAlQuadrato(arrayNoto);
+Console.Write($"ArrayNotoQuadro: ");
+StampaArray(arrayNotoQuadro);
+Console.Write($"ArrayOriginale: ");
+StampaArray(arrayNoto);
+//Stampare la somma di tutti i numeri
+int sommaElementi = sommaElementiArray(arrayNoto);
+Console.WriteLine($"La somma degli elementi dell'ultimo array originale è: {sommaElementi}");
+//Stampare la somma di tutti i numeri elevati al quadrato
+int sommaQuadrati = sommaElementiArray(arrayNotoQuadro);
+Console.WriteLine($"La somma degli elementi dell'ultimo array con gli elementi elevati al quadrato è: {sommaQuadrati}");
+Console.WriteLine();
 //FUNZIONI
 
 void StampaArray(int[] array)
@@ -56,4 +66,17 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
     return arrayCopy;  
 
+}
+
+int sommaElementiArray(int[] array)
+{
+    int[] arrayCopy = (int[])array.Clone();
+
+    int somma = 0;
+
+    for (int i = 0; i < arrayCopy.Length; i++)
+    {
+        somma += arrayCopy[i];
+    }
+    return somma;
 }
