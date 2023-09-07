@@ -31,6 +31,16 @@ Console.WriteLine($"La somma degli elementi dell'ultimo array originale è: {som
 int sommaQuadrati = sommaElementiArray(arrayNotoQuadro);
 Console.WriteLine($"La somma degli elementi dell'ultimo array con gli elementi elevati al quadrato è: {sommaQuadrati}");
 Console.WriteLine();
+
+//BONUS
+
+
+
+
+
+
+
+
 //FUNZIONI
 
 void StampaArray(int[] array)
